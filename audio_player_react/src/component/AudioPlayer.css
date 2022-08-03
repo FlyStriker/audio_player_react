@@ -1,12 +1,12 @@
 .audio_player {
-    margin-top: 20px;
-    margin-left: 20px;
+   margin: 0 auto; 
+   margin-top: 10px;   
     display: flex;
     flex-direction: column;
     max-width: 40%;
     max-height: auto;
     border-radius: 20px;
-    background-color: #1b191c;
+    background-color: #252227;
     border: 3px solid rgb(174, 2, 157);
 }
 
@@ -51,6 +51,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+
 }
 .play_stop_btn{
     border: 2px solid black;
@@ -69,6 +71,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+
 
 }
 .nextBtn{
@@ -87,6 +91,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+
 
 }
 .prevBtn{
