@@ -1,0 +1,23 @@
+.audio_player{
+    margin-top: 30px;
+    margin-left: 20px;
+    position: relative;
+    height: 200px;
+    max-width: 40%;
+    background-color: rgb(56, 54, 54);
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.image_music_track{
+    margin-top: 25px;
+    margin-left: -65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+}

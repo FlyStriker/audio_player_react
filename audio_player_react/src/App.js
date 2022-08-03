@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./component/Header";
+// import LoginForm from "./component/LoginForm.jsx";
+// import RegisterForm from "./component/RegisterForm.jsx";
+import AudioPlayer from "./component/AudioPlayer";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      {/* <LoginForm/>
+      <RegisterForm/> */}
+      <AudioPlayer/>
     </div>
   );
 }

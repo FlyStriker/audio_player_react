@@ -1,0 +1,49 @@
+body {
+    margin: 0px;
+    background-color: rgb(64, 62, 68);
+}
+
+.header {
+
+    max-width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242327;
+    border-bottom: 5px solid #ffffff;
+    color: #fff;
+
+}
+
+.header_link img {
+    margin-left: 20px;
+    width: 110px;
+    height: 60px;
+    border-radius: 40px;
+}
+
+.header_link {
+    display: flex;
+    align-items: center;
+
+}
+
+.header_button {
+    margin-right: 30px;
+}
+.header_button_login {
+    margin-right: 30px;
+}
+
+.header_button button{
+    background-color: #2b212c;
+    border: 3px solid #ee00ff;
+    width: 110px;
+    height: 60px;
+    border-radius: 20px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Ibarra Real Nova', serif;
+}
