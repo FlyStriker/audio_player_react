@@ -18,6 +18,9 @@
         
 }
 .add-track{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #252325;
     border: 3px solid #ee00ff;
     width: 100%;
@@ -29,18 +32,25 @@
     font-family: 'Ibarra Real Nova', serif;
     
 }
-
+.add-track input{
+    
+    height: 100%;
+    
+    background-color: #252325;
+    color: rgb(249, 248, 248);
+    font-size: 25px;
+    font-family: 'Ibarra Real Nova', serif;
+}
 .user_music_list_item{
     cursor: pointer;
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
+flex-direction: column;
 align-items: center;
 border : 3px solid rgb(246, 0, 221);
 border-radius: 10px;
 }
-.user_music_list_trackImg{
-    border-radius: 50%;
-}
+
 .user_music_list_item_info{
     display: flex;
     flex-direction: column;
