@@ -4,6 +4,7 @@ import logo from "../images/logo.jpg";
 import playBtn from "../images/play_stop_2.png";
 import nextBtn from "../images/next.png";
 import prevBtn from "../images/prev.png";
+import volumeBtn from "../images/volume.png";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectActiveAudio,
@@ -48,7 +49,7 @@ const AudioPlayer = () => {
     <div className="audio_player">
       <div className="track_full_info">
         <div className="image_music_track">
-          <img src={logo} alt="track image" />
+          <img src={logo} alt="track_image" />
         </div>
         <div className="track_info">
           <h1 className="track_title">Track name</h1>
@@ -84,9 +85,12 @@ const AudioPlayer = () => {
           >
             <img src={nextBtn} alt="nextBtn" className="nextBtn" />
           </button>
+          <button className="audio_player_controls_button_volume">
+            <img src={volumeBtn} alt="volumeBtn" className="volumeBtn" />
+          </button>
         </div>
         <div className="audio_player_controls_time">
-          <h3>{duration.toString()}</h3>
+          <h3>{duration.toString()} / </h3>
           <div className="audio_progress_container">
             <div className="audio_progress"></div>
           </div>
@@ -95,5 +99,7 @@ const AudioPlayer = () => {
     </div>
   );
 };
+
+
 
 export default AudioPlayer;

@@ -20,7 +20,8 @@
 }
 
 .image_music_track img {
-margin-top:10px;    width: 120px;
+margin-top:10px;   
+ width: 120px;
     height: 120px;
     border-radius: 50%;
     display: flex;
@@ -44,6 +45,8 @@ margin-top:10px;    width: 120px;
 }
 
 .audio_player_controls_button_play {
+    margin-left: 10px;
+    margin-right: 10px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -74,6 +77,24 @@ margin-top:10px;    width: 120px;
     cursor: pointer;
 
 
+}
+.audio_player_controls_button_volume {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.volumeBtn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
 }
 .nextBtn{
     width: 30px;
