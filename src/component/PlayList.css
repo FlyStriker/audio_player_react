@@ -58,3 +58,17 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 900px) {
+    
+    .convas_music_list {
+        max-width: 91%;
+    }
+    #add-track-input {
+        font-size: 20px;
+    } 
+    .track_on_list{
+        font-size: 22px;
+    }
+
+}
