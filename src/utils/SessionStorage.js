@@ -1,3 +1,4 @@
+// создаем коласс для работы с sessionStorage который будет принимать key user и active user
 export class SessionStorage{
     static USER_KEY = "users";
     static ACTIVE_USER_LOGIN = "users.active";
@@ -6,6 +7,9 @@ export class SessionStorage{
     }
 
     static createSession(login, token){
+        
+        // есть 2 варианта для создания сессии пользователя
+
         // let users = this.getUsers();
         // if(!users){
         //     users = [{

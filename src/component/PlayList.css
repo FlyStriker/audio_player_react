@@ -1,0 +1,60 @@
+.convas_music_list {
+    font-size: large;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    max-height: auto;
+    border-radius: 20px;
+    background-color: #272428;
+}
+
+.add_new_track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.add-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #252325;
+    border: 4px solid #ee00ff;
+    width: 100%;
+    height: 60px;
+    border-radius: 15px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Ibarra Real Nova', serif;
+
+}
+
+#add-track-input {
+    font-size: 26px;
+}
+
+.user_music_list_item {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid rgb(246, 0, 221);
+    border-radius: 10px;
+}
+
+.track_on_list {
+    font-size: 25px;
+}
+
+.user_music_list_item_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

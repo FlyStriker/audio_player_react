@@ -1,11 +1,11 @@
 import React from "react";
-import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import LoginForm from "./component/LoginForm";
 import RegisterForm from "./component/RegisterForm";
 import HomePage from "./component/HomePage";
 import Auth from "./Auth";
 
-
+// возвращаем стараницы для авторизации и регистрации пользователей и основную страницу 
 function App() {
     return (
     <div className="App">

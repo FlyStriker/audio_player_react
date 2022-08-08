@@ -1,52 +1,60 @@
 .audio_player {
-   margin: 0 auto; 
-   margin-top: 10px;   
+    margin: 0 auto;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    max-width: 40%;
+    max-width: 70%;
     max-height: auto;
     border-radius: 20px;
     background-color: #252227;
-    border: 3px solid rgb(174, 2, 157);
+    border: 4px solid rgb(247, 0, 255);
 }
 
 .track_full_info {
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     border-bottom: 3px solid rgb(255, 254, 254);
-    padding-bottom: 10px;
+    padding-bottom: 11px;
 }
 
 .image_music_track img {
-margin-top:10px;   
- width: 120px;
+    margin-top: 10px;
+    width: 120px;
     height: 120px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation-name: rotate;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-.track_info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
 
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .audio_player_controls_buttons {
+    align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.audio_player_controls_buttons button {
     margin-left: 10px;
 }
 
 .audio_player_controls_button_play {
-    margin-left: 10px;
-    margin-right: 10px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -57,8 +65,8 @@ margin-top:10px;
     cursor: pointer;
 
 }
-.play_stop_btn{
-    border: 2px solid black;
+
+.play_stop_btn {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -75,28 +83,9 @@ margin-top:10px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
 
-
-}
-.audio_player_controls_button_volume {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-left: 10px;
-}
-.volumeBtn{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-}
-.nextBtn{
+.nextBtn {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -113,16 +102,46 @@ margin-top:10px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-
-
 }
-.prevBtn{
-    border: 2px solid black;
+
+.prevBtn {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
+}
+
+.audio_player_control_button_volume {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.volumeBtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    cursor: default;
+}
+
+.volume_block {
+    width: 17%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+
+.volume_block input {
+    margin-left: 5px;
 }
 
 .audio_player_controls_time {
@@ -133,27 +152,16 @@ margin-top:10px;
     flex-direction: row;
     color: aliceblue;
 }
+
 .audio_player_controls_time h3 {
-    white-space: nowrap;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .audio_progress_container {
-    margin-right: 10px;
-    margin-left: 25px;
-    background-color: aliceblue;
-    border-radius: 5px;
-    width: 90%;
-    height: 10px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+    width: 80%;
 }
 
-.audio_progress {
-    background-color: rgb(218, 11, 156);
-    border-radius: 5px;
-    height: 6px;
+.audio_progress_container input {
     width: 100%;
-    margin-left: 2px;
-    margin-right: 2px;
 }

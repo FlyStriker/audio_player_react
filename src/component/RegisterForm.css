@@ -1,11 +1,12 @@
-.login_convas{
+.register_convas {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.login_form{
+
+.register_form {
     margin-top: 30px;
     width: 500px;
     height: 400px;
@@ -19,13 +20,15 @@
     border-width: 10px;
     border-style: solid;
     border-color: rgb(255, 0, 212);
-   
+
 }
-.login_form_title{
+
+.register_form_title {
     color: rgb(248, 22, 210);
     font-size: 30px;
 }
-.login_form_input{
+
+.register_form_input {
     margin-top: 20px;
     width: 300px;
     height: 40px;
@@ -34,7 +37,8 @@
     align-items: center;
     justify-content: center;
 }
-.login_form_input input{
+
+.register_form_input input {
     border-color: rgb(247, 0, 255);
     border-width: 3px;
     width: 100%;
@@ -42,13 +46,15 @@
     font-size: 30px;
     color: rgb(0, 0, 0);
 }
-.login_form_button{
-margin-top: 40px;
-background-color: rgb(204, 202, 202);
-display: flex;
+
+.register_form_button {
+    margin-top: 40px;
+    background-color: rgb(204, 202, 202);
+    display: flex;
 }
-.btn_log_in{
-    width: 150px;
+
+.btn_register {
+    width: 170px;
     font-style: italic;
     font-family: 'Courier New', Courier, monospace;
     margin-right: 10px;
@@ -64,8 +70,9 @@ display: flex;
     font-size: 30px;
     cursor: pointer;
 }
-.link_to{
-    width: 170px;
+
+.link_to {
+    width: 160px;
     margin-left: 10px;
     background-color: rgb(255, 0, 212);
     text-decoration: none;
