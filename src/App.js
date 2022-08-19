@@ -5,7 +5,6 @@ import RegisterForm from "./component/RegisterForm";
 import HomePage from "./component/HomePage";
 import Auth from "./Auth";
 
-// возвращаем стараницы для авторизации и регистрации пользователей и основную страницу 
 function App() {
     return (
     <div className="App">

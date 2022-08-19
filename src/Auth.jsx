@@ -8,7 +8,6 @@ const Auth = ({children}) => {
     if(!SessionStorage.getActiveUser()){
         return <Navigate to="/login"/>
     }
-
     return children
 }
 

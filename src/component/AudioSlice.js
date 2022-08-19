@@ -1,4 +1,4 @@
-// образаемся к инструментарию редакс 
+// обращаемся к инструментарию редакс 
 import { createSlice } from "@reduxjs/toolkit";
 import { SessionStorage } from "../utils/SessionStorage";
 
@@ -84,7 +84,7 @@ export const audioSlice = createSlice({
   },
 });
 
-// делаем экшены для слайса аудио плеера 
+// делаем action для slice аудио плеера 
 export const {addAudio,setActiveAudio,setNextAudio,setPreviousAudio,resetActiveAudio,} = audioSlice.actions;
 
 // делаем селектор песен пользывателя
