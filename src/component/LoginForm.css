@@ -70,6 +70,11 @@
     font-size: 30px;
     cursor: pointer;
 }
+.btn_log_in:hover{
+    background-color: #fff;
+    color: rgb(255, 0, 212);
+    transition: 1s;
+}
 
 .link_to {
     width: 170px;
@@ -88,4 +93,9 @@
     color: rgb(255, 255, 255);
     font-size: 30px;
     cursor: pointer;
+}
+.link_to:hover{
+    background-color: #fff;
+    color: rgb(255, 0, 212);
+    transition: 1s;
 }

@@ -36,6 +36,7 @@
 
 #add-track-input {
     font-size: 26px;
+    
 }
 
 .user_music_list_item {
@@ -46,6 +47,16 @@
     align-items: center;
     border: 3px solid rgb(246, 0, 221);
     border-radius: 10px;
+}
+::-webkit-file-upload-button{
+    width: 100%;
+    font-size: larger;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    background-color: #252325;
+    cursor: pointer;
+
 }
 
 .track_on_list {

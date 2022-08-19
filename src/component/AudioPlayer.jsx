@@ -6,19 +6,23 @@ import nextBtn from "../images/next_1.png";
 import prevBtn from "../images/prev_1.png";
 import volumeBtn from "../images/volume.png";
 import { useDispatch, useSelector } from "react-redux";
+// метод redux dispatch - отправляет данные в reducer-store
 import {
   resetActiveAudio,
   selectActiveAudio,
   selectUsersAudio,
   setNextAudio,
   setPreviousAudio,
+// Это екшены для отправки данных в reducer-store
 } from "./AudioSlice";
+// метод redux useSelector - получает данные из reducer-store 
 import { SessionStorage } from "../utils/SessionStorage";
 
 // создаем компонент AudioPlayer который будет отоброжать активное аудио и подтигивать выбраное аудио из списка треков usersAudio
-
 const AudioPlayer = () => {
+// подписались на изменение активного аудио в reducer-store
   const activeAudio = useSelector(selectActiveAudio);
+//подписались на изменение имя аудио в reducer-store , с добовлением параметров в state и если у кативного юзера аудио нет или оно не активное, то подтигнем активное аудио из usersAudio
   const userAudioName = useSelector(
     (state) =>
       selectUsersAudio(state, SessionStorage.getActiveUser())?.find(
@@ -27,7 +31,6 @@ const AudioPlayer = () => {
   );
 
   //Делаем dispatch для отправки данных в redux всех функций из Audio
-
   const dispatch = useDispatch();
   const [duration, setDuration] = useState("00:00");
   const [sliderValue, setSliderValue] = useState(0);
@@ -36,8 +39,7 @@ const AudioPlayer = () => {
   let audioRef;
   let sliderRef;
 
-  // создаем переменные - функционалы для управления плеером
-
+  // функция которая принимает секунды и канкулирует в минутах и секундах
   const calculateTime = (secs) => {
     const minutes = Math.floor(secs / 60);
     const seconds = Math.floor(secs % 60);
@@ -45,22 +47,26 @@ const AudioPlayer = () => {
     return `${minutes}:${returnedSeconds}`;
   };
 
+  // делаем функцию адаптивности ползунака под длину аудио
   const onTimeUpdate = () => {
     setSliderValue(Math.floor(audioRef.currentTime));
     setCurrentTime(calculateTime(sliderRef.value));
   };
 
+  // обработчик который срабатывает при инициализации HTML элемента аудио (обработка общего время проигрывания аудио)
   const onLoadMetadata = () => {
     setDuration(calculateTime(audioRef.duration));
     setSliderMax();
   };
 
+  // делаем функцию изменения звука плеера
   const onVolumeChange = (e) => {
     const value = e.target.value;
     setVolume(value);
     audioRef.volume = value / 100;
   };
 
+  // делаем плей при клике на кнопку плей и при повторном клике делаем паузу
   const playClick = () => {
     if (!activeAudio) {
       return;
@@ -72,18 +78,22 @@ const AudioPlayer = () => {
     }
   };
 
+  // задаем максимально значение слайдеру которое = длине аудио
   const setSliderMax = () => {
     sliderRef.max = Math.floor(audioRef.duration);
   };
 
+  // срабатывает при взаимодействии с слайдером длительности трека устанавливая новое время проигрывания (обновление текстового времени <p>)
   const onSliderInput = () => {
     setCurrentTime(calculateTime(sliderRef.value));
   };
 
+  // изменение хода слайдера в зависимости от места аудио (изменение текущего времени проигрывания аудио , при изменении слайдера )
   const onSliderChange = () => {
     audioRef.currentTime = sliderRef.value;
   };
 
+  // подписываемся под изменение активного аудио в reducer-store , идет проверка ссылки аудио и если она не равна активному аудио, то подтягиваем аудио обработчики
   useEffect(() => {
     if (activeAudio) {
       audioRef.src = activeAudio;
@@ -91,14 +101,15 @@ const AudioPlayer = () => {
       audioRef.play();
     }
   }, [activeAudio]);
+
+  // срабатывает когда мы меняеем юзера или выходим с компонента (сбрасываем активное аудио)
   useEffect(() => {
     return () => {
       dispatch(resetActiveAudio());
     };
   }, []);
 
-  //   возвращаем верстку компонента AudioPlayer и навешиваем на него функции для управления плеером
-
+  // возвращаем верстку компонента AudioPlayer и навешиваем на него функции для управления плеером
   return (
     <div className="audio_player">
       <div className="track_full_info">

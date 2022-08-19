@@ -132,7 +132,6 @@
 
 .volume_block {
     width: 17%;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,6 +140,7 @@
 
 .volume_block input {
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .audio_player_controls_time {
@@ -163,6 +163,7 @@
 
 .audio_progress_container input {
     width: 100%;
+    cursor: pointer;
 }
 
 
